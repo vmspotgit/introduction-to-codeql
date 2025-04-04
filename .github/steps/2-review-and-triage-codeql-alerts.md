@@ -68,15 +68,15 @@ Nesta atividade, exploraremos a interface de usuário do alerta. Vamos revisar o
 
 Agora que estamos familiarizados com o layout do alerta, vamos trabalhar no processo de fechar um.
 
-1. Dentro deste mesmo alerta, clique em **Descartar alerta**, escolha qualquer motivo para o descarte e adicione uma nota curta.
-2. Clique em **Descartar alerta**.
+1. Dentro deste mesmo alerta, clique em **Descartar alerta (Dimiss Alert)**, escolha qualquer motivo para o descarte e adicione uma nota curta.
+2. Clique em **Descartar alerta(Dimiss Alert)**.
 3. Neste ponto, o alerta mudará seu estado para "Descartado". Você pode agora ver a alteração que fez na trilha de auditoria na parte inferior do alerta.
-4. Navegue de volta para **Segurança** > **Alertas de verificação de código**. Você verá que você só tem 1 alerta listado.
-5. Clique em **1 Fechado**. Isso o levará aos alertas fechados onde você pode visualizar o alerta que acabou de fechar.
+4. Navegue de volta para **Segurança (Security)** > **Alertas de verificação de código (Code Scanning)**. Você verá que você só tem 1 alerta listado.
+5. Clique em **1 Fechado (closed)**. Isso o levará aos alertas fechados onde você pode visualizar o alerta que acabou de fechar.
 
 ![one-closed-alert.png](/images/one-closed-alert.png)
 
-7. (Opcional) Você também pode reabrir o alerta abrindo-o e, em seguida, selecionando **Reabrir alerta**.
+7. (Opcional) Você também pode reabrir o alerta abrindo-o e, em seguida, selecionando **Reabrir alerta (Reopen Alert)**.
 
 ### :keyboard: Atividade 5: Criar um Problema no GitHub para um Alerta
 
