@@ -1,42 +1,33 @@
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
-  TBD-step-1-notes.
--->
+## Passo 1: Habilitar o CodeQL
 
-## Step 1: Enable CodeQL
+👋 Olá! Bem-vindo ao curso de habilidades do GitHub: Habilitar a verificação de código!
 
-👋 Hello! Welcome to the GitHub Skills course: Enable code scanning! 
+Vamos começar!
 
-Let's get started!  
+Neste primeiro passo, aprenderemos mais sobre o CodeQL e como usá-lo para proteger seu código-fonte.
 
-In this first step, we'll be learning more about CodeQL and how to use it to secure your source code. 
+**O que é a verificação de código do GitHub**: _[Verificação de código](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)_ é uma capacidade que permite que as equipes de desenvolvimento integrem ferramentas de teste de segurança no processo de desenvolvimento de software. Isso é feito usando GitHub Actions. Com a verificação de código, você pode integrar muitos tipos diferentes de ferramentas, incluindo SAST, segurança de contêiner e segurança de infraestrutura como código.
 
-**What is GitHub code scanning**: _[Code scanning](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)_ is a capability that allows development teams to integrate security testing tools into the software development process. This is done using GitHub Actions. With code scanning, you can integrate many different types of tools including SAST, container, and infrastructure as code security tools.
+**O que é o CodeQL**: _[CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql)_ é uma ferramenta de teste de análise estática que ajuda a identificar fraquezas de segurança, como injeção de SQL, cross-site scripting e problemas de injeção de código.
 
-**What is CodeQL**: _[CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql)_ is a static analysis testing tool that helps you identify security weaknesses such as SQL injection, cross-site scripting, and code injection issues.
+### :keyboard: Atividade: Habilitar a verificação de código com o CodeQL
 
-### :keyboard: Activity: Enable code scanning with CodeQL
-  
-First, we will enable code scanning with CodeQL in our repository.
+Primeiro, habilitaremos a verificação de código com o CodeQL em nosso repositório.
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-2. Navigate to the **Settings** tab at the top of your newly created repository.
-3. Under the **Security** section on the left side, select **Code security and analysis**.
-4. Scroll down to the section titled **Code scanning**. For the purpose of this course, we will focus on CodeQL analysis.
-5. Click on the **Set up** dropdown menu and choose **Default**.
+1. Abra uma nova aba do navegador e siga os passos na segunda aba enquanto lê as instruções nesta aba.
+2. Navegue até a aba **Configurações** no topo do seu repositório recém-criado.
+3. Na seção **Segurança** à esquerda, selecione **Segurança e análise de código**.
+4. Role para baixo até a seção intitulada **Verificação de código**. Para o propósito deste curso, focaremos na análise do CodeQL.
+5. Clique no menu **Configurar** e escolha **Padrão**.
 ![enable-code-scanning-default.png](/images/enable-code-scanning-default.png)
 
-Let's take a look at the configuration options in the modal:
-  
-  - **Languages to analyze:** These are the languages that will be scanned by CodeQL. In this case, we will be scanning in `Python`.  
-  - **Query suites:** CodeQL [queries](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries) are packaged in bundles called "suites". This section allows you to choose which query suite to use.  We'll leave this set as **Default** for this exercise. For more information, see "[About CodeQL queries](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries)." 
-  - **Events:** This section tells CodeQL when to scan. In this case, it's set to scan on any pull request to the `main` branch.
-    
+Vamos dar uma olhada nas opções de configuração no modal:
+
+  - **Linguagens a serem analisadas:** Essas são as linguagens que serão verificadas pelo CodeQL. Neste caso, verificaremos em `Python`.
+  - **Conjuntos de consultas:** As consultas do CodeQL [queries](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries) são agrupadas em pacotes chamados "suites". Esta seção permite que você escolha qual conjunto de consultas usar. Deixaremos configurado como **Padrão** para este exercício. Para mais informações, veja "[Sobre as consultas do CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries)."
+  - **Eventos:** Esta seção informa ao CodeQL quando verificar. Neste caso, está configurado para verificar qualquer pull request para a branch `main`.
+
 ![codeql-default-configuration-box.png](/images/codeql-default-configuration-box.png)
 
-6. Click **Enable CodeQL**
-7. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+6. Clique em **Habilitar CodeQL**
+7. Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
