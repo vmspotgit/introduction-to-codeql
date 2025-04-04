@@ -62,7 +62,7 @@ Nesta atividade, exploraremos a interface de usuário do alerta. Vamos revisar o
 
 **Informações adicionais:** Finalmente, o painel do lado direito contém informações como tags, informações CWE e a severidade do alerta.
 
-![additional-information.png](/images/additional-information.png)
+![additional-information.png](/images/additiona-information.png)
 
 ### :keyboard: Atividade 4: Descartar um Alerta
 
