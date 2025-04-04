@@ -18,7 +18,7 @@ Neste exercício, revisaremos os resultados da verificação do CodeQL, tratarem
 ### :keyboard: Atividade 1: Visualizar o status de uma verificação do CodeQL
 
 Nesta atividade, exploraremos o GitHub Actions para visualizar o status de uma verificação do CodeQL.
-1. No seu novo repositório, vá para a página de Ações selecionando **Ações** na barra de navegação superior. Se a execução da ação do CodeQL ainda estiver em andamento, você verá um spinner amarelo indicando que a verificação ainda está em progresso. Isso geralmente leva cerca de 4 minutos para ser concluído.
+1. No seu novo repositório, vá para a página de Ações selecionando **Ações (Actions)** na barra de navegação superior. Se a execução da ação do CodeQL ainda estiver em andamento, você verá um spinner amarelo indicando que a verificação ainda está em progresso. Isso geralmente leva cerca de 4 minutos para ser concluído.
 2. Selecione a execução clicando em **Configuração do CodeQL**.
 
 ![codeql-setup](/images/codeql-setup.png)
