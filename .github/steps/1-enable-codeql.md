@@ -15,10 +15,10 @@ Neste primeiro passo, aprenderemos mais sobre o CodeQL e como usá-lo para prote
 Primeiro, habilitaremos a verificação de código com o CodeQL em nosso repositório.
 
 1. Abra uma nova aba do navegador e siga os passos na segunda aba enquanto lê as instruções nesta aba.
-2. Navegue até a aba **Configurações** no topo do seu repositório recém-criado.
-3. Na seção **Segurança** à esquerda, selecione **Segurança e análise de código**.
-4. Role para baixo até a seção intitulada **Verificação de código**. Para o propósito deste curso, focaremos na análise do CodeQL.
-5. Clique no menu **Configurar** e escolha **Padrão**.
+2. Navegue até a aba **Configurações (Settings)** no topo do seu repositório recém-criado.
+3. Na seção **Segurança (Security)** à esquerda, selecione **Segurança e análise de código (Advanced Security)**.
+4. Role para baixo até a seção intitulada **Análise de código (CodeQL Analysis)**. Para o propósito deste curso, focaremos na análise do CodeQL.
+5. Clique no menu **Configurar (Set up)** e escolha **Padrão (Default)**.
 ![enable-code-scanning-default.png](/images/enable-code-scanning-default.png)
 
 Vamos dar uma olhada nas opções de configuração no modal:
@@ -29,5 +29,5 @@ Vamos dar uma olhada nas opções de configuração no modal:
 
 ![codeql-default-configuration-box.png](/images/codeql-default-configuration-box.png)
 
-6. Clique em **Habilitar CodeQL**
+6. Clique em **Habilitar CodeQL (Enable CodeQL)**
 7. Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
