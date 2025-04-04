@@ -56,7 +56,7 @@ Agora, vamos dar uma olhada no pull request para ver como é a experiência.
 
   <img width="1180" alt="image" src="https://github.com/leftrightleft/enable-code-scanning/assets/4910518/378bd766-ef61-4619-ab3c-bf2c8d9618d7">
 
-3. Revise os caminhos de fluxo de dados clicando em **Mostrar caminhos**.
+3. Revise os caminhos de fluxo de dados clicando em **Mostrar caminhos (Show Paths)**.
 
 4. Se desejar, adicione um comentário e marque um de seus amigos usando o handle do GitHub deles (exemplo: `@username`). Isso notificará que você fez um comentário sobre o problema e precisa da ajuda deles para resolver o problema. 😄
 
