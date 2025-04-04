@@ -5,64 +5,63 @@
   TBD-step-4-notes.
 -->
 
-## Step 4: Prevent Vulnerabilities in the Pull Request
+## Passo 4: Prevenir Vulnerabilidades no Pull Request
 
-_Nicely done! You finished Step 3: Fix Security Vulnerabilites! :partying_face:_
+_Muito bem! Você concluiu o Passo 3: Corrigir Vulnerabilidades de Segurança! :partying_face:_
 
-Way to go! You made it this far. We're almost done! The last step is to test out the pull request integration with CodeQL. In this step, we will add a vulnerability back into the `routes.py` file to trigger an alert for a SQL injection vulnerability. This is going to be the same issue we initially saw.  
-  
-Our goal is to understand what developers experience when they find a new vulnerability.  
+Parabéns! Você chegou até aqui. Estamos quase terminando! O último passo é testar a integração do pull request com o CodeQL. Neste passo, adicionaremos uma vulnerabilidade de volta ao arquivo `routes.py` para acionar um alerta de vulnerabilidade de injeção de SQL. Esta será a mesma questão que vimos inicialmente.
 
-In this step, we will:
-- edit the `routes.py` file.
-- change the SQL statement to make it insecure.
-- commit those changes and merge the insecure code into the main branch.
-- experience the alert inside the pull request.
-  
-Let's get started 👍
+Nosso objetivo é entender o que os desenvolvedores experimentam quando encontram uma nova vulnerabilidade.
 
-**What is pull request**: Pull requests are proposed changes to a repository submitted by a user and accepted or rejected by a repository's collaborators. This allows multiple people to work on the same code at the same time. For more information, check out the GitHub Skills course "[Introduction to GitHub](https://github.com/skills/introduction-to-github)" or "[About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)" from the GitHub docs.
+Neste passo, iremos:
+- editar o arquivo `routes.py`.
+- alterar a instrução SQL para torná-la insegura.
+- cometer essas alterações e mesclar o código inseguro na branch principal.
+- experimentar o alerta dentro do pull request.
 
-**What is branch**: A branch is a parallel version of your repository. By default, your repository has one branch named main and it is considered to be the definitive branch. Creating additional branches allows you to copy the main branch of your repository and safely make any changes without disrupting the main project. For more information, see "[About branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#)" in the GitHub docs.
+Vamos começar 👍
 
-### :keyboard: Activity 1: Edit `routes.py` and create a new pull request
+**O que é um pull request**: Pull requests são mudanças propostas para um repositório submetidas por um usuário e aceitas ou rejeitadas pelos colaboradores do repositório. Isso permite que várias pessoas trabalhem no mesmo código ao mesmo tempo. Para mais informações, confira o curso de habilidades do GitHub "[Introdução ao GitHub](https://github.com/skills/introduction-to-github)" ou "[Sobre pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)" na documentação do GitHub.
 
-In this first activity, we'll introduce the same insecure SQL statement from before to the `routes.py` file. Once we update the file, we'll commit it to a new branch, then create a pull request.
+**O que é uma branch**: Uma branch é uma versão paralela do seu repositório. Por padrão, seu repositório tem uma branch chamada main e é considerada a branch definitiva. Criar branches adicionais permite que você copie a branch principal do seu repositório e faça alterações com segurança sem interromper o projeto principal. Para mais informações, veja "[Sobre branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#)" na documentação do GitHub.
 
-  1. Click the **Code** tab in your repository.
-  2. Select the `server` folder.
-  3. Select the `routes.py` file.
-  4. Click the **Edit** button to the right.
+### :keyboard: Atividade 1: Editar `routes.py` e criar um novo pull request
+
+Nesta primeira atividade, introduziremos a mesma instrução SQL insegura de antes no arquivo `routes.py`. Uma vez que atualizarmos o arquivo, faremos o commit em uma nova branch e, em seguida, criaremos um pull request.
+
+  1. Clique na aba **Código** no seu repositório.
+  2. Selecione a pasta `server`.
+  3. Selecione o arquivo `routes.py`.
+  4. Clique no botão **Editar** à direita.
 
 ![edit-button.png](/images/edit-button.png)
-  
-  5. Edit line 16 by highlighting the SQL statement and replace it with this text: `"SELECT * FROM books WHERE name LIKE '%" + name + "%'"`.
-  6. Click **Commit changes...** from the top right. The "Propose changes" window will pop up.
-  7. This time, select the radio button next to **Create a new branch**. You can create a new name for this branch or leave it as the default suggestion.
-  8. Click **Propose changes**. This opens a new pull request.
-  9. In the "Open a pull request" window, click **Create pull request**.
-  
 
-### :keyboard: Activity 2: Review pull request
+  5. Edite a linha 16 destacando a instrução SQL e substituindo-a por este texto: `"SELECT * FROM books WHERE name LIKE '%" + name + "%'"`.
+  6. Clique em **Commit changes...** no canto superior direito. A janela "Propor alterações" aparecerá.
+  7. Desta vez, selecione o botão de rádio ao lado de **Criar uma nova branch**. Você pode criar um novo nome para esta branch ou deixá-la com a sugestão padrão.
+  8. Clique em **Propor alterações**. Isso abrirá um novo pull request.
+  9. Na janela "Abrir um pull request", clique em **Criar pull request**.
 
-At this point, we've edited the file `routes.py` to add our vulnerable code, committed those changes to our new branch, and created a pull request to merge the new branch into our `main` branch. These are the same steps a developer would take to introduce new, vulnerable code into a repository. 
-  
-Now, let's take a look at the pull request to see what the experience is like.
-  
-1. In the previous activity, we created the pull request.  After creating the pull request, you were brought directly to the pull request page. At the bottom of the pull request, you will see a check called "Code scanning/CodeQL". This is the CodeQL analysis job scanning the code introduced in the pull request.
+### :keyboard: Atividade 2: Revisar pull request
+
+Neste ponto, editamos o arquivo `routes.py` para adicionar nosso código vulnerável, fizemos o commit dessas alterações em nossa nova branch e criamos um pull request para mesclar a nova branch na nossa branch `main`. Estes são os mesmos passos que um desenvolvedor tomaria para introduzir novo código vulnerável em um repositório.
+
+Agora, vamos dar uma olhada no pull request para ver como é a experiência.
+
+1. Na atividade anterior, criamos o pull request. Depois de criar o pull request, você foi levado diretamente para a página do pull request. Na parte inferior do pull request, você verá uma verificação chamada "Code scanning/CodeQL". Este é o trabalho de análise do CodeQL verificando o código introduzido no pull request.
 
 ![pr-panel](/images/pr-panel.png)
 
-2.  Once the check is complete, you will see a new comment in the pull request from CodeQL indicating a new security vulnerability; a SQL query built from user-controlled data. This is our SQL injection vulnerability.
-  
+2. Uma vez que a verificação for concluída, você verá um novo comentário no pull request do CodeQL indicando uma nova vulnerabilidade de segurança; uma consulta SQL construída a partir de dados controlados pelo usuário. Esta é a nossa vulnerabilidade de injeção de SQL.
+
   <img width="1180" alt="image" src="https://github.com/leftrightleft/enable-code-scanning/assets/4910518/378bd766-ef61-4619-ab3c-bf2c8d9618d7">
 
-3. Review the data flow paths by clicking **Show paths**.
-  
-4. If you would like, add a comment and tag one of your friends by using their GitHub handle (example: `@username`). This will notify them that you made a comment on the issue and need their help solving the problem. 😄
+3. Revise os caminhos de fluxo de dados clicando em **Mostrar caminhos**.
 
-If this were a real-world situation, the developer would fix the SQL statement in their branch. Once fixed, the vulnerability will automatically close out.
+4. Se desejar, adicione um comentário e marque um de seus amigos usando o handle do GitHub deles (exemplo: `@username`). Isso notificará que você fez um comentário sobre o problema e precisa da ajuda deles para resolver o problema. 😄
 
-If you would like to learn more about pull request integrations for code scanning, see "[Triaging code scanning alerts in pull requests](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/triaging-code-scanning-alerts-in-pull-requests)."
+Se esta fosse uma situação do mundo real, o desenvolvedor corrigiria a instrução SQL em sua branch. Uma vez corrigido, a vulnerabilidade será automaticamente fechada.
 
-5. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+Se você quiser saber mais sobre as integrações de pull request para verificação de código, veja "[Triaging code scanning alerts in pull requests](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/triaging-code-scanning-alerts-in-pull-requests)."
+
+5. Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
