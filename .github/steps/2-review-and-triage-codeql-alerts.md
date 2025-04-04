@@ -32,7 +32,7 @@ Uma vez que a verificação esteja completa, um cheque verde aparecerá ao lado 
 Nesta atividade, visualizaremos as descobertas do CodeQL na página de Segurança do seu repositório. A página de Segurança é onde todas as informações relacionadas à segurança são exibidas.
 
 1. Navegue até a aba **Segurança (Security)** na barra de navegação superior do seu repositório.
-2. Selecione **Verificação de código(Secret Scanning)** sob o título "Alertas de vulnerabilidade" na barra de navegação à esquerda.
+2. Selecione **Verificação de código(Code Scanning)** sob o título "Alertas de vulnerabilidade" na barra de navegação à esquerda.
 
 Esta tela conterá todas as vulnerabilidades identificadas pelo CodeQL no código deste repositório. Explore os diferentes filtros e capacidades de busca nesta página. Essas capacidades de filtragem tornam-se muito úteis quando você está lidando com muitas descobertas!
 
