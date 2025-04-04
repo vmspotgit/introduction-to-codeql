@@ -83,8 +83,8 @@ Agora que estamos familiarizados com o layout do alerta, vamos trabalhar no proc
 Este último passo mostrará como criar um Problema no GitHub para acompanhar o trabalho que envolve resolver uma vulnerabilidade. Os problemas fornecem um espaço para colaboração para um problema de segurança e podem ser atribuídos a pessoas ou equipes.
 
 1. Abra um dos alertas abertos que o CodeQL identificou na verificação.
-2. Clique no botão verde **Criar problema** no canto superior direito do alerta. Se você não vir este botão, verifique o status do alerta para garantir que é um alerta aberto.
+2. Clique no botão verde **Criar problema (Create Issue)** no canto superior direito do alerta. Se você não vir este botão, verifique o status do alerta para garantir que é um alerta aberto.
 3. Adicione quaisquer detalhes que você gostaria de incluir no novo formulário de problema.
-4. Clique em **Enviar novo problema**.
-5. Para visualizar seu problema, clique em **Problemas** na barra de navegação superior do seu repositório.
+4. Clique em **Enviar novo problema (Create)**.
+5. Para visualizar seu problema, clique em **Issues** na barra de navegação superior do seu repositório.
 6. Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
