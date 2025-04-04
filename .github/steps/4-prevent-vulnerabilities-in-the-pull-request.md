@@ -29,18 +29,18 @@ Vamos começar 👍
 
 Nesta primeira atividade, introduziremos a mesma instrução SQL insegura de antes no arquivo `routes.py`. Uma vez que atualizarmos o arquivo, faremos o commit em uma nova branch e, em seguida, criaremos um pull request.
 
-  1. Clique na aba **Código** no seu repositório.
+  1. Clique na aba **Código (Code)** no seu repositório.
   2. Selecione a pasta `server`.
   3. Selecione o arquivo `routes.py`.
-  4. Clique no botão **Editar** à direita.
+  4. Clique no botão **Editar (Edit)** à direita.
 
 ![edit-button.png](/images/edit-button.png)
 
   5. Edite a linha 16 destacando a instrução SQL e substituindo-a por este texto: `"SELECT * FROM books WHERE name LIKE '%" + name + "%'"`.
   6. Clique em **Commit changes...** no canto superior direito. A janela "Propor alterações" aparecerá.
-  7. Desta vez, selecione o botão de rádio ao lado de **Criar uma nova branch**. Você pode criar um novo nome para esta branch ou deixá-la com a sugestão padrão.
-  8. Clique em **Propor alterações**. Isso abrirá um novo pull request.
-  9. Na janela "Abrir um pull request", clique em **Criar pull request**.
+  7. Desta vez, selecione o botão de rádio ao lado de **Criar uma nova branch (Create a new branch)**. Você pode criar um novo nome para esta branch ou deixá-la com a sugestão padrão.
+  8. Clique em **Propor alterações (Propose changes)**. Isso abrirá um novo pull request.
+  9. Na janela "Abrir um pull request", clique em **Criar pull request (Create Pull Request)**.
 
 ### :keyboard: Atividade 2: Revisar pull request
 
