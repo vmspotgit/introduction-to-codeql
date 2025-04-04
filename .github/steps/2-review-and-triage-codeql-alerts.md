@@ -48,7 +48,7 @@ Nesta atividade, exploraremos a interface de usuário do alerta. Vamos revisar o
 
 ![location-information](/images/location-information.png)
 
-**Caminhos:** Clicar em "Mostrar caminhos" lhe dará insights adicionais sobre o fluxo de dados do alerta. O modal nos mostra onde a entrada do usuário (chamamos isso de "fonte") flui através da aplicação até ser processada (chamamos isso de "sumidouro"). Isso visualiza o fluxo de dados através da sua aplicação.
+**Caminhos:** Clicar em "Mostrar caminhos (Show Paths)" lhe dará insights adicionais sobre o fluxo de dados do alerta. O modal nos mostra onde a entrada do usuário (chamamos isso de "fonte") flui através da aplicação até ser processada (chamamos isso de "sumidouro"). Isso visualiza o fluxo de dados através da sua aplicação.
 
 **Recomendações:** Esta seção fornece uma visão geral rápida da ferramenta (CodeQL neste caso), ID da Regra, e até permite que você visualize a consulta do CodeQL usada para encontrar esta vulnerabilidade. Você pode visualizar a consulta clicando em **Visualizar fonte**. Além disso, este painel inclui recomendações para corrigir esta vulnerabilidade. Clique em **Mostrar mais** para visualizar a recomendação completa.
 
