@@ -11,7 +11,7 @@
 
 # Habilite o CodeQL para proteger seu código-fonte
 
-_Garantir a segurança do código-fonte da aplicação é uma etapa crítica no desenvolvimento de software moderno. Neste curso do GitHub Skills, você aprenderá a usar a varredura de código do GitHub para identificar, resolver e prevenir padrões de codificação inseguros._
+_Garantir a segurança do código-fonte da aplicação é uma etapa crítica no desenvolvimento de software moderno. Neste curso do GitHub, você aprenderá a usar a varredura de código para identificar, resolver e prevenir padrões de codificação inseguros._
 
 </header>
 
@@ -51,7 +51,7 @@ A varredura de código faz parte do conjunto de produtos [GitHub Advanced Securi
 }).toString()
 -->
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=introduction-to-codeql&owner=%40me&name=skills-introduction-to-codeql&description=GitHub+Skills:+Introduction+to+CodeQL&visibility=public)
+[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=dev-pods&template_name=introduction-to-codeql&owner=%40me&name=skills-introduction-to-codeql&description=GitHub+Habilidades:+Introdução+para+CodeQL&visibility=public)
 
 1. Clique com o botão direito em **Iniciar curso** e abra o link em uma nova aba.
 2. Na nova aba, a maioria dos prompts será preenchida automaticamente para você.
@@ -69,8 +69,8 @@ A varredura de código faz parte do conjunto de produtos [GitHub Advanced Securi
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-codeql) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+Obter ajuda: [Poste em nosso fórum de discussão](https://github.com/skills/.github/discussions) &bull; [Revise a página de status do GitHub](https://www.githubstatus.com/)
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2025 GitHub &bull; [Código de Conduta](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
 </footer>
