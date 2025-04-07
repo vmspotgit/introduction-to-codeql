@@ -1,8 +1,6 @@
 ## Passo 1: Habilitar o CodeQL
 
-👋 Olá! Bem-vindo ao curso de habilidades do GitHub: Habilitar a verificação de código!
-
-Vamos começar!
+_Bem-vindo ao "Habilitar a verificação de código"! :wave:_
 
 Neste primeiro passo, aprenderemos mais sobre o CodeQL e como usá-lo para proteger seu código-fonte.
 
@@ -15,19 +13,20 @@ Neste primeiro passo, aprenderemos mais sobre o CodeQL e como usá-lo para prote
 Primeiro, habilitaremos a verificação de código com o CodeQL em nosso repositório.
 
 1. Abra uma nova aba do navegador e siga os passos na segunda aba enquanto lê as instruções nesta aba.
-2. Navegue até a aba **Configurações (Settings)** no topo do seu repositório recém-criado.
-3. Na seção **Segurança (Security)** à esquerda, selecione **Segurança e análise de código (Advanced Security)**.
-4. Role para baixo até a seção intitulada **Análise de código (CodeQL Analysis)**. Para o propósito deste curso, focaremos na análise do CodeQL.
-5. Clique no menu **Configurar (Set up)** e escolha **Padrão (Default)**.
+2. Navegue até a aba **Settings** no topo do seu repositório recém-criado.
+3. Na seção **Security** à esquerda, selecione **Advanced Security**.
+4. Role para baixo até a seção intitulada **CodeQL Analysis**. Para o propósito deste curso, focaremos na análise do CodeQL.
+5. Clique no menu **Set up** e escolha **Default**.
 ![enable-code-scanning-default.png](/images/enable-code-scanning-default.png)
 
 Vamos dar uma olhada nas opções de configuração no modal:
 
-  - **Linguagens a serem analisadas:** Essas são as linguagens que serão verificadas pelo CodeQL. Neste caso, verificaremos em `Python`.
-  - **Conjuntos de consultas:** As consultas do CodeQL [queries](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries) são agrupadas em pacotes chamados "suites". Esta seção permite que você escolha qual conjunto de consultas usar. Deixaremos configurado como **Padrão** para este exercício. Para mais informações, veja "[Sobre as consultas do CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries)."
-  - **Eventos:** Esta seção informa ao CodeQL quando verificar. Neste caso, está configurado para verificar qualquer pull request para a branch `main`.
+  - **Languages**: Essas são as linguagens que serão verificadas pelo CodeQL. Neste caso, verificaremos em `Python`.
+  - **Query suites**: As consultas do CodeQL [queries](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries) são agrupadas em pacotes chamados "suites". Esta seção permite que você escolha qual conjunto de consultas usar. Deixaremos configurado como **Default** para este exercício. Para mais informações, veja "[Sobre as consultas do CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries)."
+  - **Scan Events**: Esta seção informa ao CodeQL quando verificar. Neste caso, está configurado para verificar qualquer pull request para a branch `main`.
 
 ![codeql-default-configuration-box.png](/images/codeql-default-configuration-box.png)
 
-6. Clique em **Habilitar CodeQL (Enable CodeQL)**
-7. Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
+6. Clique em **Enable CodeQL**
+
+Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
