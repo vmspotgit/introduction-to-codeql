@@ -29,18 +29,18 @@ Vamos começar 👍
 
 Nesta primeira atividade, introduziremos a mesma instrução SQL insegura de antes no arquivo `routes.py`. Uma vez que atualizarmos o arquivo, faremos o commit em uma nova branch e, em seguida, criaremos um pull request.
 
-  1. Clique na aba **Código (Code)** no seu repositório.
+  1. Clique na aba **Code** no seu repositório.
   2. Selecione a pasta `server`.
   3. Selecione o arquivo `routes.py`.
-  4. Clique no botão **Editar (Edit)** à direita.
+  4. Clique no botão **Edit** à direita.
 
 ![edit-button.png](/images/edit-button.png)
 
   5. Edite a linha 16 destacando a instrução SQL e substituindo-a por este texto: `"SELECT * FROM books WHERE name LIKE '%" + name + "%'"`.
-  6. Clique em **Commit changes...** no canto superior direito. A janela "Propor alterações" aparecerá.
-  7. Desta vez, selecione o botão de rádio ao lado de **Criar uma nova branch (Create a new branch)**. Você pode criar um novo nome para esta branch ou deixá-la com a sugestão padrão.
-  8. Clique em **Propor alterações (Propose changes)**. Isso abrirá um novo pull request.
-  9. Na janela "Abrir um pull request", clique em **Criar pull request (Create Pull Request)**.
+  6. Clique em **Commit changes...** no canto superior direito. A janela "Propose changes" aparecerá.
+  7. Desta vez, selecione o botão de rádio ao lado de **Create a new branch**. Você pode criar um novo nome para esta branch ou deixá-la com a sugestão padrão.
+  8. Clique em **Propose changes**. Isso abrirá um novo pull request.
+  9. Na janela "Open a pull request", clique em **Create Pull Request**.
 
 ### :keyboard: Atividade 2: Revisar pull request
 
@@ -56,7 +56,7 @@ Agora, vamos dar uma olhada no pull request para ver como é a experiência.
 
   <img width="1180" alt="image" src="https://github.com/leftrightleft/enable-code-scanning/assets/4910518/378bd766-ef61-4619-ab3c-bf2c8d9618d7">
 
-3. Revise os caminhos de fluxo de dados clicando em **Mostrar caminhos (Show Paths)**.
+3. Revise os caminhos de fluxo de dados clicando em **Show Paths**.
 
 4. Se desejar, adicione um comentário e marque um de seus amigos usando o handle do GitHub deles (exemplo: `@username`). Isso notificará que você fez um comentário sobre o problema e precisa da ajuda deles para resolver o problema. 😄
 
@@ -64,4 +64,4 @@ Se esta fosse uma situação do mundo real, o desenvolvedor corrigiria a instru�
 
 Se você quiser saber mais sobre as integrações de pull request para verificação de código, veja "[Triaging code scanning alerts in pull requests](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/triaging-code-scanning-alerts-in-pull-requests)."
 
-5. Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
+Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
