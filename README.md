@@ -15,36 +15,95 @@ _Garantir a segurança do código-fonte da aplicação é uma etapa crítica no 
 
 </header>
 
-## Passo 1: Habilitar o CodeQL
+<!--
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
+  TBD-step-2-notes.
+-->
 
-_Bem-vindo ao "Habilitar a verificação de código"! :wave:_
+## Passo 2: Revisar e Tratar Alertas do CodeQL
 
-Neste primeiro passo, aprenderemos mais sobre o CodeQL e como usá-lo para proteger seu código-fonte.
+_Parabéns! Você fez o CodeQL funcionar! :tada:_
 
-**O que é a verificação de código do GitHub**: _[Verificação de código](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)_ é uma capacidade que permite que as equipes de desenvolvimento integrem ferramentas de teste de segurança no processo de desenvolvimento de software. Isso é feito usando GitHub Actions. Com a verificação de código, você pode integrar muitos tipos diferentes de ferramentas, incluindo SAST, segurança de contêiner e segurança de infraestrutura como código.
+Neste exercício, revisaremos os resultados da verificação do CodeQL, trataremos um alerta e criaremos um problema no GitHub para acompanhar um alerta.
 
-**O que é o CodeQL**: _[CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql)_ é uma ferramenta de teste de análise estática que ajuda a identificar fraquezas de segurança, como injeção de SQL, cross-site scripting e problemas de injeção de código.
+**O que é o GitHub Actions**: O GitHub Actions é a plataforma de automação e CI/CD dentro do GitHub. Usamos o GitHub Actions para orquestrar e executar verificações de segurança com a verificação de código. O GitHub Actions é uma plataforma de integração contínua e entrega contínua (CI/CD) que permite automatizar seu pipeline de construção, teste e implantação. Para mais informações sobre o GitHub Actions, veja "[Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)."
 
-### :keyboard: Atividade: Habilitar a verificação de código com o CodeQL
+**O que é CWE**: Common Weakness Enumeration (CWE) é um sistema de categorização para fraquezas e vulnerabilidades de hardware e software. Pense nisso como uma forma de descrever e categorizar problemas de segurança no código-fonte de uma aplicação. Para mais informações sobre CWEs, veja o artigo da Wikipedia "[Common Weakness Enumeration](https://en.wikipedia.org/wiki/Common_Weakness_Enumeration)."
 
-Primeiro, habilitaremos a verificação de código com o CodeQL em nosso repositório.
+### :keyboard: Atividade 1: Visualizar o status de uma verificação do CodeQL
 
-1. Abra uma nova aba do navegador e siga os passos na segunda aba enquanto lê as instruções nesta aba.
-2. Navegue até a aba **Settings** no topo do seu repositório recém-criado.
-3. Na seção **Security** à esquerda, selecione **Advanced Security**.
-4. Role para baixo até a seção intitulada **CodeQL Analysis**. Para o propósito deste curso, focaremos na análise do CodeQL.
-5. Clique no menu **Set up** e escolha **Default**.
-![enable-code-scanning-default.png](/images/enable-code-scanning-default.png)
+Nesta atividade, exploraremos o GitHub Actions para visualizar o status de uma verificação do CodeQL.
+1. No seu novo repositório, vá para a página de Ações selecionando **Actions** na barra de navegação superior. Se a execução da ação do CodeQL ainda estiver em andamento, você verá um spinner amarelo indicando que a verificação ainda está em progresso. Isso geralmente leva cerca de 4 minutos para ser concluído.
+2. Selecione a execução clicando em **CodeQL Setup**.
 
-Vamos dar uma olhada nas opções de configuração no modal:
+![codeql-setup](/images/codeql-setup.png)
 
-  - **Languages**: Essas são as linguagens que serão verificadas pelo CodeQL. Neste caso, verificaremos em `Python`.
-  - **Query suites**: As consultas do CodeQL [queries](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries) são agrupadas em pacotes chamados "suites". Esta seção permite que você escolha qual conjunto de consultas usar. Deixaremos configurado como **Default** para este exercício. Para mais informações, veja "[Sobre as consultas do CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries)."
-  - **Scan Events**: Esta seção informa ao CodeQL quando verificar. Neste caso, está configurado para verificar qualquer pull request para a branch `main`.
+Observe que mais informações estão disponíveis dentro da execução das Ações. Sinta-se à vontade para explorar esta seção para visualizar informações como os logs do CodeQL, duração, status e artefatos gerados pelo CodeQL.
 
-![codeql-default-configuration-box.png](/images/codeql-default-configuration-box.png)
+Uma vez que a verificação esteja completa, um cheque verde aparecerá ao lado da execução.
 
-6. Clique em **Enable CodeQL**
+### :keyboard: Atividade 2: Visualizar todos os Alertas do CodeQL
+
+Nesta atividade, visualizaremos as descobertas do CodeQL na página de Segurança do seu repositório. A página de Segurança é onde todas as informações relacionadas à segurança são exibidas.
+
+1. Navegue até a aba **Security** na barra de navegação superior do seu repositório.
+2. Selecione **Code Scanning** sob o título "Vulnerability alerts" na barra de navegação à esquerda.
+
+Esta tela conterá todas as vulnerabilidades identificadas pelo CodeQL no código deste repositório. Explore os diferentes filtros e capacidades de busca nesta página. Essas capacidades de filtragem tornam-se muito úteis quando você está lidando com muitas descobertas!
+
+### :keyboard: Atividade 3: Revisar um Alerta
+
+Nesta atividade, exploraremos a interface de usuário do alerta. Vamos revisar o fluxo de dados da vulnerabilidade, identificar qual parte do código o alerta impacta e obter mais informações sobre o alerta.
+
+**Alert status**: Esta seção exibe o status atual do alerta (aberto ou fechado), identifica a branch onde a verificação detectou o alerta e mostra o timestamp do alerta.
+
+![alert-status](/images/alert-status.png)
+
+**Location information**: Esta seção descreve qual parte do código é vulnerável.
+
+![location-information](/images/location-information.png)
+
+**Paths**: Clicar em "Show Paths" lhe dará insights adicionais sobre o fluxo de dados do alerta. O modal nos mostra onde a entrada do usuário (chamamos isso de "fonte") flui através da aplicação até ser processada (chamamos isso de "sumidouro"). Isso visualiza o fluxo de dados através da sua aplicação.
+
+**Recommendations**: Esta seção fornece uma visão geral rápida da ferramenta (CodeQL neste caso), ID da Regra, e até permite que você visualize a consulta do CodeQL usada para encontrar esta vulnerabilidade. Você pode visualizar a consulta clicando em **Visualizar fonte**. Além disso, este painel inclui recomendações para corrigir esta vulnerabilidade. Clique em **Mostrar mais** para visualizar a recomendação completa.
+
+![recommendations](/images/recommendations.png)
+
+**Audit trail**: A trilha de auditoria mostra o histórico do alerta. Esta trilha mostrará o status à medida que os usuários marcam um alerta como fechado ou corrigem um alerta no código.
+
+![audit-trail](/images/audit-trail.png)
+
+**Alert triage**: Use os botões no canto superior direito do alerta para triagem ou para criar um novo problema para o alerta. Não faça nada ainda. Vamos entrar nesses botões em um momento. 😄
+
+**Additional info**: Finalmente, o painel do lado direito contém informações como tags, informações CWE e a severidade do alerta.
+
+![additional-information.png](/images/additiona-information.png)
+
+### :keyboard: Atividade 4: Descartar um Alerta
+
+Agora que estamos familiarizados com o layout do alerta, vamos trabalhar no processo de fechar um.
+
+1. Dentro deste mesmo alerta, clique em **Dimiss Alert**, escolha qualquer motivo para o descarte e adicione uma nota curta.
+2. Clique em **Dimiss Alert**.
+3. Neste ponto, o alerta mudará seu estado para "Dismissed". Você pode agora ver a alteração que fez na trilha de auditoria na parte inferior do alerta.
+4. Navegue de volta para **Security** > **Code Scanning**. Você verá que você só tem 1 alerta listado.
+5. Clique em **1 closed**. Isso o levará aos alertas fechados onde você pode visualizar o alerta que acabou de fechar.
+
+![one-closed-alert.png](/images/one-closed-alert.png)
+
+7. (Opcional) Você também pode reabrir o alerta abrindo-o e, em seguida, selecionando **Reopen Alert**.
+
+### :keyboard: Atividade 5: Criar um Problema no GitHub para um Alerta
+
+Este último passo mostrará como criar um Problema no GitHub para acompanhar o trabalho que envolve resolver uma vulnerabilidade. Os problemas fornecem um espaço para colaboração para um problema de segurança e podem ser atribuídos a pessoas ou equipes.
+
+1. Abra um dos alertas abertos que o CodeQL identificou na verificação.
+2. Clique no botão verde **Create Issue** no canto superior direito do alerta. Se você não vir este botão, verifique o status do alerta para garantir que é um alerta aberto.
+3. Adicione quaisquer detalhes que você gostaria de incluir no novo formulário de problema.
+4. Clique em **Submit new issue**.
+5. Para visualizar seu problema, clique em **Issues** na barra de navegação superior do seu repositório.
 
 Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
 
