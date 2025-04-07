@@ -70,7 +70,7 @@ Agora que estamos familiarizados com o layout do alerta, vamos trabalhar no proc
 
 1. Dentro deste mesmo alerta, clique em **Dimiss Alert**, escolha qualquer motivo para o descarte e adicione uma nota curta.
 2. Clique em **Dimiss Alert**.
-3. Neste ponto, o alerta mudará seu estado para "Descartado". Você pode agora ver a alteração que fez na trilha de auditoria na parte inferior do alerta.
+3. Neste ponto, o alerta mudará seu estado para "Dismissed". Você pode agora ver a alteração que fez na trilha de auditoria na parte inferior do alerta.
 4. Navegue de volta para **Security** > **Code Scanning**. Você verá que você só tem 1 alerta listado.
 5. Clique em **1 closed**. Isso o levará aos alertas fechados onde você pode visualizar o alerta que acabou de fechar.
 
