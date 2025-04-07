@@ -15,50 +15,38 @@ _Garantir a segurança do código-fonte da aplicação é uma etapa crítica no 
 
 </header>
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
-  TBD-step-1-notes.
--->
+## Passo 1: Habilitar o CodeQL
 
-## Bem-vindo
+_Bem-vindo ao "Habilitar a verificação de código"! :wave:_
 
-_Bem-vindo ao "Introdução ao CodeQL"! :wave:_
+Neste primeiro passo, aprenderemos mais sobre o CodeQL e como usá-lo para proteger seu código-fonte.
 
-Neste curso, exploraremos o uso da varredura de código do GitHub, alimentada pelo [CodeQL](https://codeql.github.com/), para identificar práticas comuns de codificação que podem levar a vulnerabilidades de segurança. Durante este curso, habilitaremos a varredura de código em seu repositório para identificar, remediar e prevenir vulnerabilidades.
+**O que é a verificação de código do GitHub**: _[Verificação de código](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)_ é uma capacidade que permite que as equipes de desenvolvimento integrem ferramentas de teste de segurança no processo de desenvolvimento de software. Isso é feito usando GitHub Actions. Com a verificação de código, você pode integrar muitos tipos diferentes de ferramentas, incluindo SAST, segurança de contêiner e segurança de infraestrutura como código.
 
-A varredura de código faz parte do conjunto de produtos [GitHub Advanced Security (GHAS)](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security). Todos os recursos do Advanced Security são 100% gratuitos para repositórios públicos de código aberto.
+**O que é o CodeQL**: _[CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql)_ é uma ferramenta de teste de análise estática que ajuda a identificar fraquezas de segurança, como injeção de SQL, cross-site scripting e problemas de injeção de código.
 
-- **Para quem é este curso**: Desenvolvedores, engenheiros de segurança, mantenedores de código aberto.
-- **O que você aprenderá**: Mostraremos como habilitar a varredura de código e identificar vulnerabilidades de injeção de SQL com o CodeQL.
-- **O que você construirá**: Uma pipeline de desenvolvimento de software segura que permite identificar e prevenir novas vulnerabilidades de segurança de serem introduzidas no seu código de produção.
-- **Pré-requisitos**: Neste curso, você precisará de um conhecimento básico de conceitos do GitHub, como pull requests, GitHub Actions e código-fonte. Você também precisará estar familiarizado com os conceitos de Teste Estático de Segurança de Aplicações (SAST). Não se preocupe, desmistificaremos as partes complexas para você 🙂.
-- **Quanto tempo**: Este curso tem quatro etapas e leva menos de 30 minutos para ser concluído.
+### :keyboard: Atividade: Habilitar a verificação de código com o CodeQL
 
-## Como iniciar este curso
+Primeiro, habilitaremos a verificação de código com o CodeQL em nosso repositório.
 
-<!-- For start course, run in JavaScript:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'TBD-organization',
-  template_name: 'TBD-course-name',
-  owner: '@me',
-  name: 'TBD-organization-TBD-course-name',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
+1. Abra uma nova aba do navegador e siga os passos na segunda aba enquanto lê as instruções nesta aba.
+2. Navegue até a aba **Settings** no topo do seu repositório recém-criado.
+3. Na seção **Security** à esquerda, selecione **Advanced Security**.
+4. Role para baixo até a seção intitulada **CodeQL Analysis**. Para o propósito deste curso, focaremos na análise do CodeQL.
+5. Clique no menu **Set up** e escolha **Default**.
+![enable-code-scanning-default.png](/images/enable-code-scanning-default.png)
 
-[![start-course](https://raw.githubusercontent.com/dev-pods/introduction-to-secret-scanning/873eb13decfe79fd486ff84bd97de0dab4912d9a/images/botao.svg)](https://github.com/new?template_owner=dev-pods&template_name=introduction-to-codeql&owner=%40me&name=skills-introduction-to-codeql&description=GitHub+Habilidades:+Introdução+para+CodeQL&visibility=public)
+Vamos dar uma olhada nas opções de configuração no modal:
 
-1. Clique com o botão direito em **Iniciar curso** e abra o link em uma nova aba.
-2. Na nova aba, a maioria dos prompts será preenchida automaticamente para você.
-   - Para o proprietário, escolha sua conta pessoal ou uma organização para hospedar o repositório.
-   - Recomendamos criar um repositório público, pois repositórios privados [usarão minutos do Actions](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Role para baixo e clique no botão **Criar repositório** na parte inferior do formulário.
-3. Após a criação do seu novo repositório, espere cerca de 20 segundos e atualize a página. Siga as instruções passo a passo no README do novo repositório.
+  - **Languages**: Essas são as linguagens que serão verificadas pelo CodeQL. Neste caso, verificaremos em `Python`.
+  - **Query suites**: As consultas do CodeQL [queries](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries) são agrupadas em pacotes chamados "suites". Esta seção permite que você escolha qual conjunto de consultas usar. Deixaremos configurado como **Default** para este exercício. Para mais informações, veja "[Sobre as consultas do CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql#about-codeql-queries)."
+  - **Scan Events**: Esta seção informa ao CodeQL quando verificar. Neste caso, está configurado para verificar qualquer pull request para a branch `main`.
+
+![codeql-default-configuration-box.png](/images/codeql-default-configuration-box.png)
+
+6. Clique em **Enable CodeQL**
+
+Espere cerca de 20 segundos e então atualize esta página (a página onde você está seguindo as instruções). [GitHub Actions](https://docs.github.com/en/actions) será atualizado automaticamente para o próximo passo.
 
 <footer>
 
